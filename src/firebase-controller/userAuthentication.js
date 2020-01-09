@@ -18,10 +18,11 @@ export const signInWithFacebook = () => {
 export const signOut = () => {
   firebase.auth().signOut().then(() => {
   // Sign-out successful.
-    console.log('Has cerrado sesion');
+    // console.log('Has cerrado sesion');
+  // eslint-disable-next-line no-unused-vars
   }).catch((error) => {
   // An error happened.
-    console.log(error, 'Estarás aquí para la eternidad');
+    // console.log(error, 'Estarás aquí para la eternidad');
   });
 };
 

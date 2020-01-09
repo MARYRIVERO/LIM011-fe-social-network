@@ -4,9 +4,9 @@ export const getInfo = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       // se incia seción
-      console.log('Existe un usuario activo que inicio sesión');
+      // console.log('Existe un usuario activo que inicio sesión');
     } else {
-      console.log('Ningun usuario ha iniciado sesion');
+      // console.log('Ningun usuario ha iniciado sesion');
     }
   });
 };

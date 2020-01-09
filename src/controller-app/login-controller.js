@@ -7,12 +7,13 @@ export const loginFunction = (email, pass, mensajeError) => {
   signInUser(email, pass)
     .then(() => {
       window.location.hash = '#/home';
-      console.log('Me loguie');
+      // console.log('Me loguie');
     })
     .catch((error) => {
       const errorCode = error.code;
+      // eslint-disable-next-line no-unused-vars
       const errorMessage = error.message;
-      console.log('Detectando un error: ', error, errorMessage);
+      // console.log('Detectando un error: ', error, errorMessage);
       switch (errorCode) {
         case 'auth/user-not-found':
           msjError.innerHTML = '*Usuario no registrado';
@@ -32,43 +33,47 @@ export const loginFunction = (email, pass, mensajeError) => {
 export const loginWithGmail = () => {
   signInWithGoogle()
     .then((result) => {
+      // eslint-disable-next-line no-unused-vars
       const user = result.user;
+      // eslint-disable-next-line no-unused-vars
       const token = result.credential.accessToken;
-      console.log('te has logueado con gmail', user, token);
+      // console.log('te has logueado con gmail', user, token);
       // console.log(result);
       newUser(result.user.uid, result.user.email, result.user.displayName, result.user.photoURL)
         .then(() => {
-          console.log('se registro documento');
+          // console.log('se registro documento');
           window.location.hash = '#/home';
         })
         .catch(() => {
-          console.log('se produjo un error');
+          // console.log('se produjo un error');
         });
     })
     .catch((error) => {
+      // eslint-disable-next-line no-unused-vars
       const errorCode = error.code;
+      // eslint-disable-next-line no-unused-vars
       const errorMessage = error.message;
-      alert(`Error detectado: ${errorMessage}, Tipo: ${errorCode} `);
+      // alert(`Error detectado: ${errorMessage}, Tipo: ${errorCode} `);
     });
 };
 export const loginFacebook = () => {
   signInWithFacebook()
     .then((result) => {
-      console.log('te has logueado con Facebook');
-      console.log(result);
+      // console.log('te has logueado con Facebook');
+      // console.log(result);
       newUser(result.user.uid, result.user.email, result.user.displayName, result.user.photoURL)
         .then(() => {
-          console.log('se registró documento');
+          // console.log('se registró documento');
           window.location.hash = '#/home';
         })
         .catch(() => {
-          console.log('se produjo un error');
+          // console.log('se produjo un error');
         });
     })
     .catch((error) => {
       const errorCode = error.code;
       if (errorCode === 'auth/account-exists-with-different-credential') {
-        console.log('es el mismo usuario');
+        // console.log('es el mismo usuario');
       }
     });
 };
