@@ -15,7 +15,7 @@ firebase.initializeApp({
 // eslint-disable-next-line no-unused-vars
 const db = firebase.firestore();
 
-//   Add users to collection
+//
 
 //   db.collection("users").add({
 //     first: "Ada",
