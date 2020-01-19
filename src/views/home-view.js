@@ -1,10 +1,5 @@
 import {
-<<<<<<< HEAD
-  // eslint-disable-next-line comma-dangle
-  signOut
-=======
   signOut,
->>>>>>> 673c97df71612d16656cb674bbadeb1d65dcf33d
 } from '../model/user-authentication.js';
 // eslint-disable-next-line no-unused-vars
 import { addTextPost, getTextPost } from '../model/model-post.js';
@@ -78,22 +73,15 @@ export default (user) => {
     // eslint-disable-next-line no-unused-vars
     const textPost = divElement.querySelector('#publication-text').value;
     // console.log(textPost);
-<<<<<<< HEAD
-    // console.log('Post enviado:', addTextPost(textPost, false));
-=======
 
-    console.log('Post enviado:', addTextPost(textPost, user.ID, user.Name, false));
+    // console.log('Post enviado:', addTextPost(textPost, user.ID, user.Name, false));
+    // eslint-disable-next-line no-use-before-define
     getTextPost(postBox, user);
->>>>>>> 673c97df71612d16656cb674bbadeb1d65dcf33d
   });
   // eslint-disable-next-line no-unused-vars
   const postBox = divElement.querySelector('#test');
-<<<<<<< HEAD
-  // console.log(getTextPost(postBox, user));}
-=======
   getTextPost(postBox, user);
 
->>>>>>> 673c97df71612d16656cb674bbadeb1d65dcf33d
 
   btnProfile.addEventListener('click', (e) => {
     e.preventDefault();

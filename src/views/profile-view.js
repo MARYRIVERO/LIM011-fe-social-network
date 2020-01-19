@@ -57,7 +57,9 @@ export default (user) => {
   divElement.innerHTML = viewProfile;
 
   const userName = divElement.querySelector('#user-name');
+  // eslint-disable-next-line no-unused-vars
   const userMenu = divElement.querySelector('#user-menu');
+  // eslint-disable-next-line no-unused-vars
   const userAdress = divElement.querySelector('#address');
 
   const btnNav = divElement.querySelector('#button-nav');

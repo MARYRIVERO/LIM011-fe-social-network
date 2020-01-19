@@ -12,12 +12,7 @@ export const loginFunction = (email, pass, mensajeError) => {
     })
     .catch((error) => {
       const errorCode = error.code;
-<<<<<<< HEAD
-      // eslint-disable-next-line no-unused-vars
-      const errorMessage = error.message;
-=======
       // const errorMessage = error.message;
->>>>>>> 673c97df71612d16656cb674bbadeb1d65dcf33d
       // console.log('Detectando un error: ', error, errorMessage);
       switch (errorCode) {
         case 'auth/user-not-found':

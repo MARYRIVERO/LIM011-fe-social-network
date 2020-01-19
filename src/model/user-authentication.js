@@ -37,10 +37,6 @@ export const userObserver = (userInformation) => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       userInformation(user.uid);
-<<<<<<< HEAD
-=======
-
->>>>>>> 673c97df71612d16656cb674bbadeb1d65dcf33d
       // console.log('usuario logueado', user);
     } else {
       // console.log('Ha cerrado sesión');
